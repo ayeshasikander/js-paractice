@@ -1,0 +1,118 @@
+<!-- <title>Faluty Calculator</title>
+<div id="main">
+    <div id="display"><h1 id="result"></h1></div>
+    <section id="key-holder">
+        <button class="keys">1</button>
+        <button class="keys">2</button>
+        <button class="keys">3</button>
+        <button class="keys">4</button>
+        <button class="keys">5</button>
+        <button class="keys">6</button>
+        <button class="keys">7</button>
+        <button class="keys">8</button>
+        <button class="keys">9</button>
+        <button class="keys">0</button>
+        <button class="keys">.</button>
+        <button class="keys" id="equals">=</button>
+        <button class="keys operator">+</button>
+        <button class="keys operator">/</button>
+        <button class="keys operator">*</button>
+        <button class="keys operator">-</button>
+        <button class="keys operator" id="clear">C</button>
+    </section>
+</div>
+
+</body>
+<style>
+#clear{margin-right: 68%;}
+#display{
+    display: flex;
+    overflow:auto;
+    align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+color:wheat}
+h1{
+    margin-bottom:0px}
+*{
+    font-family:'Lucida Sans'}
+body{
+    background:radial-gradient(black,black);
+    margin:0px;padding:0pc;display: flex;flex-direction: column;align-items: center;
+    height:100dvh;}
+#main{
+    width:30%;
+    height:90%;
+    margin-top:2%;
+    background-image:url(GlassMorphicBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;flex-direction: column;align-items: center;}
+#display{
+    width:95%;
+    height:25%;
+    background-color: rgba(128, 128, 128, 0.4);
+    margin-top:5%;
+    margin-bottom:5%;}
+#key-holder{
+    width:95%;
+    height:70%;
+    display: flex;
+    justify-content: center;
+    gap:10px;margin-top:1%;margin-bottom:1%;
+    flex-wrap: wrap;}
+.keys{
+    width:20%;
+    background-color: rgba(255,255,255,0.2);
+    color:white;font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;border:none;
+transform: all 0.2s ease;}
+.operator{
+    background:rgba(248, 121, 1, 0.7    )}
+.keys:hover{
+    scale: 1.1;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    color:black;font-weight: bold;
+}.operator:hover{
+    background:orange}
+
+</style>
+<script>
+let buttons = document.querySelectorAll('button')  
+let display = document.getElementById('result')
+let equal = document.getElementById('equals')
+let randomNum;
+console.log(buttons);
+   
+buttons.forEach(element => {
+    if(element.innerHTML == '='){console.log('ijikul');}
+    else if(element.innerHTML == 'C'){element.addEventListener('click',()=>{result.innerHTML = ''});}
+    else{
+    element.addEventListener('click',()=>{result.innerText+=element.innerHTML;})}
+});
+
+equal.addEventListener('click',()=>{
+    randomNum = Math.round(Math.random()*10)
+    console.log(randomNum);
+
+    
+    try{
+        final = eval(display.innerHTML);
+        display.innerHTML = final
+    }
+    
+    catch(error){
+        display.innerText = ''
+    } 
+if(final=='Infinity'){display.innerText = 'Not defined'}
+    if(randomNum==5 || randomNum==4){
+        display.innerText = Math.round(Math.random()*final)
+    }
+})
+</script>
+</html> -->
